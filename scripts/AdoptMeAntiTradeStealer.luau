@@ -135,6 +135,12 @@ if ESEC then
         getgenv().getreg = nil
         debug = {}
         getgenv().debug = {}
+        getupvalue = nil
+        getgenv().getupvalue = nil
+        getupvalues = nil
+        getgenv().getupvalues = nil
+        setupvalue = nil
+        getgenv().setupvalue = nil
     end
 elseif what then
     getfunctionhash = nil
@@ -145,6 +151,12 @@ elseif what then
     getgenv().getreg = nil
     debug = {}
     getgenv().debug = {}
+    getupvalue = nil
+    getgenv().getupvalue = nil
+    getupvalues = nil
+    getgenv().getupvalues = nil
+    setupvalue = nil
+    getgenv().setupvalue = nil
 else
     getgenv().debug = debug
     getgenv().getupvalue = getupvalue

@@ -316,13 +316,12 @@
             scriptsData.forEach(script => {
                 const card = document.createElement('div');
                 card.className = 'script-card';
-                const codePreview = script.code.length > 80 ? script.code.substring(0, 80) + '...' : script.code;
                 card.innerHTML = `
                     <div class="card-header">
                         <span class="script-name"><i class="fas fa-scroll" style="font-size:1.2rem; margin-right:8px; color:#5f7aff;"></i>${escapeHtml(script.name)}</span>
                     </div>
                     <div class="script-desc">${escapeHtml(script.desc)}</div>
-                    <div class="code-preview">${escapeHtml(codePreview)}</div>
+                    <div class="code-preview">${escapeHtml(script.code)}</div>
                     <button class="copy-btn" data-code="${escapeHtmlAttr(script.code)}"><i class="fas fa-copy"></i> Copy Script</button>
                 `;
                 const copyButton = card.querySelector('.copy-btn');
@@ -358,8 +357,8 @@
                 <div class="hero-desc">shitty scripts for your enjoyment</div>
                 <div class="stat-badge">
                     <span class="stat-item"><i class="fas fa-shield-alt"></i> 100% free</span>
-                    <span class="stat-item"><i class="fas fa-bolt"></i> instant copy</span>
-                    <span class="stat-item"><i class="fas fa-cloud-upload-alt"></i> daily updates</span>
+                    <span class="stat-item"><i class="fas fa-bolt"></i> keyless</span>
+                    <span class="stat-item"><i class="fas fa-bolt"></i> source avaliable, dont get it confused with open source</span>
                 </div>
             `;
             container.appendChild(hero);

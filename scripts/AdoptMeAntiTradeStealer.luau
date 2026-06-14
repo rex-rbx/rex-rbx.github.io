@@ -2,6 +2,7 @@
 -- all rights reserved, except for the use of this software aligning with the intended use
 -- prevent scripts from stealing all ur adopt me pets
 local ESEC = getgenv().ExtraSecurity
+local what = getgenv().ThisIsWayTooSecure
 local FuncHashHook;
 local clonefunction = clonefunction or clonefunc or function(f) local f = f return function(...) return f(...) end end
 local getfunctionhash = getfunctionhash and clonefunction(getfunctionhash) or debug.getfunctionhash and clonefunction(debug.getfunctionhash) or function() return error("no...", 2) end
@@ -125,6 +126,25 @@ if ESEC then
     getgenv().getgc = gchooks
     getfunctionhash = FuncHashHook
     getgenv().getfunctionhash = FuncHashHook
+    if what then
+        getfunctionhash = nil
+        getgenv().getfunctionhash = nil
+        getgc = nil
+        getgenv().getgc = nil
+        getreg = nil
+        getgenv().getreg = nil
+        debug = {}
+        getgenv().debug = {}
+    end
+elseif what then
+    getfunctionhash = nil
+    getgenv().getfunctionhash = nil
+    getgc = nil
+    getgenv().getgc = nil
+    getreg = nil
+    getgenv().getreg = nil
+    debug = {}
+    getgenv().debug = {}
 else
     getgenv().debug = debug
     getgenv().getupvalue = getupvalue

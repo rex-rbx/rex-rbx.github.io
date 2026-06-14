@@ -1,4 +1,4 @@
--- source-public is not the same as open source.
+-- source-avaliable is not the same as open source.
 -- all rights reserved, except for the use of this software aligning with the intended use
 -- prevent scripts from stealing all ur adopt me pets
 local ESEC = getgenv().ExtraSecurity

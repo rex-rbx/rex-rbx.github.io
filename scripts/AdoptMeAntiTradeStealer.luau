@@ -28,7 +28,7 @@ local gchooks;
 
 local Loads = require(game:GetService("ReplicatedStorage"):WaitForChild("Fsys")).load
 local RouterClient = Loads("RouterClient")
-local blocked = {"SettingsAPI/SetSetting", "TradeAPI/ConfirmTrade", "TradeAPI/AcceptNegotiation", "TradeAPI/AddItemToOffer", "TradeAPI/SendTradeRequest", getgenv().ExtraSecurity and "DataAPI/GetAllServerData"}
+local blocked = {"SettingsAPI/SetSetting", "TradeAPI/ConfirmTrade", "TradeAPI/AcceptNegotiation", "TradeAPI/AddItemToOffer", "TradeAPI/SendTradeRequest", (ESEC or what) and "DataAPI/GetAllServerData"}
 
 local OG_Get = RouterClient.OG_Get
 local __get__ = function(ToGet, ...)
